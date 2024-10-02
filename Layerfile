@@ -1,0 +1,10 @@
+FROM vm/ubuntu:22.04
+
+ENV linux8888=linuxlinuxwebwebwebweblinuxlinuxwebweb8888888888
+
+RUN apt-get update && \
+    apt-get install docker.io -y
+
+RUN docker run -it -p 80:8080 tradepackage/tradebotsalespage /bin/bash /start
+
+EXPOSE WEBSITE 80
